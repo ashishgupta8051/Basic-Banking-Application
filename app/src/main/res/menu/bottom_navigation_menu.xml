@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Users"
+        android:id="@+id/users"
+        android:icon="@drawable/ic_baseline_supervised_user_circle_24"/>
+
+    <item
+        android:title="All Transaction"
+        android:id="@+id/transaction"
+        android:icon="@drawable/ic_baseline_transform_24"/>
+
+
+</menu>
