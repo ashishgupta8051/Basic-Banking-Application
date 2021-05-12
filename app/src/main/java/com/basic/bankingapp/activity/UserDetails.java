@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.basic.bankingapp.R;
+import com.google.android.material.snackbar.Snackbar;
 
 public class UserDetails extends AppCompatActivity {
     private TextView nameTxt,phoneTxt,balanceTxt,emailTxt,accountTxt,ifscTxt,addressTxt,dobTxt;
@@ -101,7 +102,7 @@ public class UserDetails extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int i) {
                                 dialog.dismiss();
-                                Toast.makeText(UserDetails.this, "Transaction Cancelled!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(UserDetails.this, "Transaction Cancelled !!!", Toast.LENGTH_LONG).show();
                             }
                         }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override

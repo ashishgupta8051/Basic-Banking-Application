@@ -10,8 +10,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.basic.bankingapp.R;
@@ -24,6 +26,7 @@ import com.basic.bankingapp.params.DatabaseDetails;
 import com.basic.bankingapp.params.TransactionEntity;
 import com.basic.bankingapp.params.UserEntity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -110,8 +113,7 @@ public class SendAmountToUser extends AppCompatActivity implements SendAmountToU
                     @Override
                     public void onClick (DialogInterface dialogInterface, int i) {
                         new TransactionDatabase(SendAmountToUser.this).insertTransferData(fromUserName,"Not Selected",transferAmount,"Cancelled",time);
-
-                        Toast.makeText(SendAmountToUser.this, "Transaction Cancelled!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(SendAmountToUser.this, "Transaction Cancelled !!!", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getApplicationContext(), BottomNavigationActivity.class));
                         finish();
                     }
@@ -148,10 +150,8 @@ public class SendAmountToUser extends AppCompatActivity implements SendAmountToU
 
         new TransactionDatabase(this).insertTransferData(fromUserName,toUserName,transferAmount,"Successful",time);
 
-        Toast.makeText(this, "Transaction Successful!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Transaction Successful !!!", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(SendAmountToUser.this, BottomNavigationActivity.class));
         finish();
-
-
     }
 }
